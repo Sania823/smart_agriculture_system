@@ -4,7 +4,7 @@
 #define DHTTYPE DHT11
 #define MOTOR_PIN 5
 #define THRESHOLD_MOISTURE 1000
-#define THRESHOLD_TEMPERATURE 35
+
 
 DHT dht(DHTPIN, DHTTYPE);
 void setup()
@@ -36,7 +36,7 @@ void loop()
   
 
   
-  if (moistureLevel > THRESHOLD_MOISTURE && temperature > THRESHOLD_TEMPERATURE)
+  if (moistureLevel > THRESHOLD_MOISTURE )
   {
     digitalWrite(MOTOR_PIN, HIGH);
     Serial.println("\nMOISTURE above threshold! .");
